@@ -14,7 +14,7 @@ This is a simple RESTful API for managing a library system. It allows you to man
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/yourusername/library-management-api.git
+    git clone https://github.com/Shoaibxaif/library-management-system.git
     cd library-management-api
     ```
 
