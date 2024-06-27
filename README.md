@@ -1,4 +1,4 @@
-# Library Management API
+# Library Management System
 
 This is a simple RESTful API for managing a library system. It allows you to manage books, patrons, borrowing records, and staff.
 
