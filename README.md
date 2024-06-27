@@ -1,139 +1,155 @@
-# Library Management System
 
-This is a simple RESTful API for managing a library system. It allows you to manage books, patrons, borrowing records, and staff.
+```markdown
+# Library Management System API Documentation
+
+This documentation provides details on how to use the Library Management System API.
 
 ## Getting Started
 
 ### Prerequisites
 
+Before you begin, ensure you have the following installed:
 - Node.js
 - MySQL
+- Postman (for testing API endpoints)
 
 ### Installation
 
 1. Clone the repository:
-
-    ```sh
-    git clone https://github.com/Shoaibxaif/library-management-system.git
-    cd library-management-api
-    ```
+   ```bash
+   git clone https://github.com/your/repository.git
+   cd repository
+   ```
 
 2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-    ```sh
-    npm install
-    ```
+3. Set up environment variables:
+   - Create a `.env` file in the root directory.
+   - Add the following environment variables:
+     ```
+     DB_HOST=localhost
+     DB_USER=root
+     DB_PASSWORD=your_password
+     DB_DATABASE=LibraryManagementSystem
+     ```
 
-3. Set up the database:
+4. Import the database schema:
+   - Use the provided SQL schema (`library_schema.sql`) to set up your MySQL database.
 
-    - Create a MySQL database and tables according to your needs.
-    - Update the database connection settings in the `db.js` file.
+5. Start the server:
+   ```bash
+   npm start
+   ```
 
-4. Start the server:
-
-    ```sh
-    node app.js
-    ```
+6. Verify the server is running by visiting `http://localhost:3000` in your browser.
 
 ## API Endpoints
 
+### Home
+
+- **GET** `/`
+  - Retrieves the count of books in the library.
+
 ### Books
 
-#### Get all books
+- **GET** `/api/books`
+  - Retrieves all books.
+  
+- **POST** `/api/books`
+  - Adds a new book to the database.
 
-- **URL**: `/books`
-- **Method**: `GET`
-- **Success Response**:
-    - **Code**: 200
-    - **Content**: `[{"BookID": 1, "Title": "Book Title", "Author": "Author Name", ...}]`
-
-#### Add a new book
-
-- **URL**: `/books`
-- **Method**: `POST`
-- **Body Parameters**:
-    - `Title` (string)
-    - `Author` (string)
-    - `ISBN` (string)
-    - `Genre` (string)
-    - `Publisher` (string)
-    - `Year` (number)
-- **Success Response**:
-    - **Code**: 200
-    - **Content**: `{"affectedRows": 1, ...}`
+  Example request body:
+  ```json
+  {
+    "Title": "Book Title",
+    "Author": "Book Author",
+    "ISBN": "1234567890123",
+    "Genre": "Fiction",
+    "Publisher": "Publisher Name",
+    "Year": 2023
+  }
+  ```
 
 ### Patrons
 
-#### Get all patrons
+- **GET** `/api/patrons`
+  - Retrieves all patrons.
+  
+- **POST** `/api/patrons`
+  - Adds a new patron to the database.
 
-- **URL**: `/patrons`
-- **Method**: `GET`
-- **Success Response**:
-    - **Code**: 200
-    - **Content**: `[{"PatronID": 1, "Name": "Patron Name", ...}]`
-
-#### Add a new patron
-
-- **URL**: `/patrons`
-- **Method**: `POST`
-- **Body Parameters**:
-    - `Name` (string)
-    - `Address` (string)
-    - `ContactInfo` (string)
-    - `MembershipID` (string)
-- **Success Response**:
-    - **Code**: 200
-    - **Content**: `{"affectedRows": 1, ...}`
+  Example request body:
+  ```json
+  {
+    "Name": "Patron Name",
+    "Address": "Patron Address",
+    "ContactInfo": "Patron Contact Info",
+    "MembershipID": "ABC123"
+  }
+  ```
 
 ### Borrowings
 
-#### Get all borrowings
+- **GET** `/api/borrowings`
+  - Retrieves all borrowings with formatted dates.
+  
+- **POST** `/api/borrowings`
+  - Records a new borrowing in the database.
 
-- **URL**: `/borrowings`
-- **Method**: `GET`
-- **Success Response**:
-    - **Code**: 200
-    - **Content**: `[{"BorrowingID": 1, "BorrowDate": "2023-01-01", "ReturnDate": "2023-01-10", "BookTitle": "Book Title", "PatronName": "Patron Name"}]`
-
-#### Add a new borrowing record
-
-- **URL**: `/borrowings`
-- **Method**: `POST`
-- **Body Parameters**:
-    - `BorrowDate` (string)
-    - `ReturnDate` (string)
-    - `PatronID` (number)
-    - `BookID` (number)
-- **Success Response**:
-    - **Code**: 200
-    - **Content**: `{"affectedRows": 1, ...}`
+  Example request body:
+  ```json
+  {
+    "BorrowDate": "2023-06-30",
+    "ReturnDate": "2023-07-15",
+    "PatronID": 1,
+    "BookID": 1
+  }
+  ```
 
 ### Staff
 
-#### Get all staff members
+- **GET** `/api/staff`
+  - Retrieves all staff members.
+  
+- **POST** `/api/staff`
+  - Adds a new staff member to the database.
 
-- **URL**: `/staff`
-- **Method**: `GET`
-- **Success Response**:
-    - **Code**: 200
-    - **Content**: `[{"StaffID": 1, "Name": "Staff Name", ...}]`
+  Example request body:
+  ```json
+  {
+    "Name": "Staff Name",
+    "Position": "Staff Position",
+    "ContactInfo": "Staff Contact Info"
+  }
+  ```
 
-#### Add a new staff member
+## Testing with Postman
 
-- **URL**: `/staff`
-- **Method**: `POST`
-- **Body Parameters**:
-    - `Name` (string)
-    - `Position` (string)
-    - `ContactInfo` (string)
-- **Success Response**:
-    - **Code**: 200
-    - **Content**: `{"affectedRows": 1, ...}`
+1. Open Postman and import the provided Postman collection (`LibraryManagementSystem.postman_collection.json`).
+
+2. Test each endpoint with appropriate request bodies.
+
+## Troubleshooting
+
+- If you encounter any issues, ensure your database connection details in the `.env` file are correct.
+- Check console logs for any server-side errors.
 
 ## Contributing
 
-Feel free to submit issues, fork the repository, and send pull requests!
+- Fork the repository, make your changes, and submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+```
+
+### Files to Include in Your Repository:
+
+1. **library_schema.sql**: SQL file containing the database schema.
+2. **.env**: Environment file with database connection details (`DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_DATABASE`).
+3. **LibraryManagementSystem.postman_collection.json**: Postman collection for testing API endpoints.
+
+This template provides a structured overview of your API and includes steps for setup, usage, testing with Postman, troubleshooting tips, and guidelines for contributing. Adjust it according to your specific API details and repository structure.
