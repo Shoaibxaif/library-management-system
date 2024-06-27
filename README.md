@@ -145,11 +145,3 @@ Before you begin, ensure you have the following installed:
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 ```
-
-### Files to Include in Your Repository:
-
-1. **library_schema.sql**: SQL file containing the database schema.
-2. **.env**: Environment file with database connection details (`DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_DATABASE`).
-3. **LibraryManagementSystem.postman_collection.json**: Postman collection for testing API endpoints.
-
-This template provides a structured overview of your API and includes steps for setup, usage, testing with Postman, troubleshooting tips, and guidelines for contributing. Adjust it according to your specific API details and repository structure.
