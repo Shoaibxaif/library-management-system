@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management System</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
+  <body class="bg-gray-100  ">
+    <nav class="bg-blue-600 p-4 mb-5">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="/" class="text-white text-lg font-bold">Library Management</a>
+        <div class="flex space-x-4">
+            <a href="/api/" class="text-white">Docs</a>
+          <a href="/api/books" class="text-white">Books</a>
+          <a href="/api/patrons" class="text-white">Patrons</a>
+          <a href="/api/borrowings" class="text-white">Borrowings</a>
+          <a href="/api/staff" class="text-white">Staff</a>
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Search..."
+            class="px-4 py-2 rounded"
+          />
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>

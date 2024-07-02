@@ -1,0 +1,28 @@
+<%- include('navbar') %>
+<body class="bg-gray-100 p-4">
+  <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <h1 class="text-2xl font-bold mb-4">Add New Patron</h1>
+    <form action="/api/add-patron" method="POST" class="space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+        <input type="text" id="name" name="Name" required class="mt-1 px-4 py-2 w-full border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+      </div>
+      <div>
+        <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+        <input type="text" id="address" name="Address" required class="mt-1 px-4 py-2 w-full border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+      </div>
+      <div>
+        <label for="contactInfo" class="block text-sm font-medium text-gray-700">Contact Info</label>
+        <input type="text" id="contactInfo" name="ContactInfo" required class="mt-1 px-4 py-2 w-full border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+      </div>
+      <div>
+        <label for="membershipID" class="block text-sm font-medium text-gray-700">Membership ID</label>
+        <input type="text" id="membershipID" name="MembershipID" required class="mt-1 px-4 py-2 w-full border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+      </div>
+      <div class="flex justify-end">
+        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500">Add Patron</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

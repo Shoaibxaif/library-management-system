@@ -115,3 +115,11 @@ INSERT INTO Staff (Name, Position, ContactInfo) VALUES
 ('Hannah White', 'Reference Librarian', 'hannah.white@example.com'),
 ('Isaac Hall', 'Library Clerk', 'isaac.hall@example.com'),
 ('Julia Clark', 'Library Director', 'julia.clark@example.com');
+
+
+-- show books 
+select * from Book;
+
+-- delete book 
+DELETE FROM Book
+WHERE BookID = 32;
