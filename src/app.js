@@ -5,6 +5,7 @@ const path = require('path');
 const routes = require('./routes');
 
 const app = express();
+app.use(express.static('public'));
 
 // Middleware to handle method override
 app.use(methodOverride('_method'));
