@@ -2,7 +2,7 @@
 <body class="bg-gray-100 p-4">
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
     <h1 class="text-2xl font-bold mb-4">Edit Patron</h1>
-    <form action="/api/edit-patron/<%= patron.PatronID %>" method="POST">
+    <form action="/api/edit-patron/<%= patron._id %>" method="POST">
       <div class="mb-4">
         <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
         <input type="text" id="name" name="Name" value="<%= patron.Name %>" required class="border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm">
