@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-const db = require('./src/db'); 
-const apiRoutes = require('./src/routes'); 
+const db = require('./db'); 
+const apiRoutes = require('./routes'); 
 require('dotenv').config();
 
 app.use(express.json());
