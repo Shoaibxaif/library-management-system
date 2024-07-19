@@ -11,5 +11,5 @@ app.use('/', apiRoutes);
 
 const port = process.env.PORT;
 app.listen(port,
-console.log(`http://localhost:${port}/api`)
+console.log(`http://localhost:${port}/`)
 );

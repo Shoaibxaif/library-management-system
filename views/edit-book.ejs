@@ -2,7 +2,7 @@
 <body class="bg-gray-100 p-4">
   <div class="max-w-3xl mx-auto sm:px-6 lg:px-8 bg-white p-6 rounded-lg shadow-md">
     <h1 class="text-2xl font-bold mb-6">Edit Book</h1>
-    <form action="/api/edit-book/<%= book._id %>" method="POST" class="space-y-4">
+    <form action="/edit-book/<%= book._id %>" method="POST" class="space-y-4">
       <div>
         <label for="Title" class="block text-sm font-medium text-gray-700">Title:</label>
         <input type="text" id="Title" name="Title" value="<%= book.Title %>" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
