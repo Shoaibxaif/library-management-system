@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.use('/', apiRoutes);
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 app.listen(port,
 console.log(`http://localhost:${port}/`)
 );
