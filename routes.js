@@ -129,7 +129,6 @@ router.post('/delete-patron/:id', async (req, res) => {
 });
 
 // Borrowing routes
-
 // Get all borrowings
 router.get('/borrowings', async (req, res) => {
   try {
