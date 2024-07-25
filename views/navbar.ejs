@@ -4,38 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library Management System</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <script>
       hljs.highlightAll();
     </script>
   </head>
-  <body class="bg-gray-100  ">
+  <body class="bg-gray-100">
     <nav class="bg-blue-600 p-4 mb-5">
-      <div class="container mx-auto flex justify-between items-center">
+      <div class="container mx-auto flex flex-wrap justify-between items-center">
         <a href="/api" class="text-white text-lg font-bold">Library Management</a>
-        <div class="flex space-x-4">
-            <a href="/api" class="text-white">Home</a>
-          <a href="/api/books" class="text-white">Books</a>
-          <a href="/api/patrons" class="text-white">Patrons</a>
-          <a href="/api/borrowings" class="text-white">Borrowings</a>
-          <a href="/api/staff" class="text-white">Staff</a>
-        </div>
-        <div>
-          <input
-            type="text"
-            placeholder="Search..."
-            class="px-4 py-2 rounded"
-          />
+        <button class="text-white md:hidden" id="nav-toggle">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        <div class="hidden w-full md:flex md:items-center md:w-auto" id="nav-content">
+          <div class="flex flex-col md:flex-row md:space-x-4 mt-4 md:mt-0">
+            <a href="/api" class="text-white block md:inline-block px-2 py-1">Home</a>
+            <a href="/api/books" class="text-white block md:inline-block px-2 py-1">Books</a>
+            <a href="/api/patrons" class="text-white block md:inline-block px-2 py-1">Patrons</a>
+            <a href="/api/borrowings" class="text-white block md:inline-block px-2 py-1">Borrowings</a>
+            <a href="/api/staff" class="text-white block md:inline-block px-2 py-1">Staff</a>
+          </div>
         </div>
       </div>
     </nav>
+    <script>
+      document.getElementById('nav-toggle').onclick = function () {
+        document.getElementById('nav-content').classList.toggle('hidden');
+      };
+    </script>
   </body>
 </html>
