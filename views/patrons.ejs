@@ -3,7 +3,7 @@
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
     <div class="flex justify-between items-center mb-4">
       <h1 class="text-2xl font-bold">Patron List</h1>
-      <a href="/add-patron" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md shadow-md">Add Patron</a>
+      <a href="/api/add-patron" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md shadow-md">Add Patron</a>
     </div>
     <div class="overflow-x-auto border border-gray-200 shadow-md sm:rounded-lg">
       <table class="min-w-full divide-y divide-gray-200">
@@ -48,8 +48,8 @@
               <%= patron.MembershipID %>
             </td>
             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-              <a href="/edit-patron/<%= patron._id %>" class="text-blue-600 hover:underline mr-2">Edit</a>
-              <form action="/delete-patron/<%= patron._id %>" method="POST" class="inline">
+              <a href="/api/edit-patron/<%= patron._id %>" class="text-blue-600 hover:underline mr-2">Edit</a>
+              <form action="/api/delete-patron/<%= patron._id %>" method="POST" class="inline">
                 <input type="hidden" name="_method" value="DELETE">
                 <button type="submit" class="text-red-600 hover:underline">Delete</button>
               </form>

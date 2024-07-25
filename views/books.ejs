@@ -3,7 +3,7 @@
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
     <div class="flex justify-between items-center mb-4">
       <h1 class="text-2xl font-bold">Book List</h1>
-      <a href="/add-book" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md shadow-md">Add New Book</a>
+      <a href="/api/add-book" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md shadow-md">Add New Book</a>
     </div>
     <div class="overflow-x-auto border border-gray-200 shadow-md sm:rounded-lg">
       <table class="min-w-full divide-y divide-gray-200">
@@ -60,8 +60,8 @@
               <%= book.Year %>
             </td>
             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-              <a href="/edit-book/<%= book._id %>" class="text-indigo-600 hover:text-indigo-900">Edit</a>
-              <form action="/delete-book/<%= book._id %>" method="POST" class="inline-block">
+              <a href="/api/edit-book/<%= book._id %>" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+              <form action="/api/delete-book/<%= book._id %>" method="POST" class="inline-block">
                 <button type="submit" class="text-red-600 hover:text-red-900 ml-2">Delete</button>
               </form>
             </td>
